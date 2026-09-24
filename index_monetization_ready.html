@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Food Lover's — easy homemade recipes, cooking tutorials, meal ideas and practical kitchen tips for everyone.">
+<meta name="keywords" content="easy recipes, cooking tutorials, homemade meals, South African recipes, food blog, meal ideas">
+<meta name="author" content="Food Lover's">
+<title>Food Lover's | Recipes, Tutorials & Kitchen Tips</title>
+<style>
+:root{--orange:#f4511e;--dark:#241812;--cream:#fff8ef;--gold:#ffb24a;--ink:#2b211c;--muted:#76675b;--line:#ead8c4;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}button,input{font:inherit}
+header{position:sticky;top:0;z-index:50;background:rgba(36,24,18,.98);color:#fff;padding:14px 6%;box-shadow:0 3px 20px #0002}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:28px;font-weight:900}.logo span{color:var(--gold)}.nav ul{display:flex;gap:22px;list-style:none}.nav a{font-weight:700}.nav a:hover{color:var(--gold)}.menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+.hero{min-height:650px;padding:75px 7%;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:45px;background:linear-gradient(120deg,#fff0d9,#ffd39e)}.hero h1{font-size:clamp(45px,6vw,78px);line-height:1.02;margin:18px 0}.hero h1 span{color:var(--orange)}.hero p{font-size:19px;color:#635348;max-width:650px;margin-bottom:28px}.badge{display:inline-block;background:#fff;border-radius:30px;padding:9px 16px;font-weight:800;color:var(--orange)}.btn{display:inline-block;background:var(--orange);color:#fff;border:0;padding:14px 22px;border-radius:28px;font-weight:800;cursor:pointer}.btn.alt{background:var(--dark)}.hero-art{min-height:390px;border-radius:38px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:155px;box-shadow:0 25px 60px #7a431e25}
+section{padding:72px 7%}.title{text-align:center;font-size:40px;line-height:1.15;margin-bottom:8px}.sub{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 34px}.search{max-width:650px;margin:0 auto 28px;display:flex;background:#fff;border:1px solid var(--line);border-radius:30px;overflow:hidden}.search input{flex:1;border:0;outline:0;padding:15px 20px;font-size:16px;background:#fff}.search button{border:0;background:var(--orange);color:#fff;padding:0 23px;cursor:pointer}.categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:35px}.filter{border:1px solid #e6cdb3;background:#fff;padding:9px 16px;border-radius:22px;cursor:pointer;font-weight:700}.filter.active,.filter:hover{background:var(--orange);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:#fff;border-radius:22px;overflow:hidden;border:1px solid #efdfcd;box-shadow:0 10px 30px #59351b12;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 18px 35px #59351b1c}.pic{height:190px;display:flex;align-items:center;justify-content:center;font-size:82px;background:linear-gradient(135deg,#ffe8c5,#fff7ec)}.body{padding:21px}.body h3{font-size:22px}.meta{font-size:14px;color:#8a7869;margin:6px 0 11px}.body p{color:#66584e;margin-bottom:17px}.card-actions{display:flex;gap:9px;flex-wrap:wrap}.small-btn{border:0;background:var(--orange);color:#fff;padding:9px 14px;border-radius:20px;font-weight:700;cursor:pointer}.small-btn.secondary{background:#f4eadf;color:var(--dark)}
+.ad-slot{max-width:1000px;min-height:105px;margin:35px auto 0;border:2px dashed #d8c1a6;border-radius:18px;background:#fffdf9;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#8a7869}.ad-slot strong{display:block;color:var(--dark)}
+.feature{background:#fff}.feature-box{max-width:1050px;margin:auto;background:linear-gradient(135deg,#fff2dd,#ffe0b3);border-radius:28px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.feature-box .emoji{font-size:130px;text-align:center}.checklist{list-style:none;margin:18px 0}.checklist li{margin:9px 0}.checklist li::before{content:'✓';color:var(--orange);font-weight:900;margin-right:10px}
+.video{background:var(--dark);color:#fff}.video-box{max-width:950px;margin:auto;background:#3a2a20;border-radius:25px;padding:38px;text-align:center}.play{width:85px;height:85px;border-radius:50%;border:0;background:var(--orange);color:#fff;font-size:30px;margin:20px;cursor:pointer}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}.step{background:#4a3528;padding:22px;border-radius:17px}.step b{color:var(--gold);display:block;margin-bottom:5px}
+.affiliate{background:#fff}.affiliate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.affiliate-card{background:#fffaf4;border:1px solid var(--line);border-radius:20px;padding:24px}.affiliate-card .icon{font-size:48px}.affiliate-card h3{margin:8px 0}.affiliate-card p{color:var(--muted);margin-bottom:15px}.disclosure{font-size:13px;color:#806f60;text-align:center;margin-top:22px}
+.newsletter{background:#ffead0;text-align:center}.newsletter form{max-width:600px;margin:25px auto 10px;display:flex}.newsletter input{flex:1;padding:14px;border:1px solid #dfc4a5;border-radius:25px 0 0 25px;outline:0}.newsletter button{border:0;background:var(--orange);color:#fff;padding:0 22px;border-radius:0 25px 25px 0;cursor:pointer;font-weight:800}.form-message{font-weight:700;color:#7c3b1f;min-height:24px}
+.about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;max-width:1050px;margin:auto}.about-box{background:#fff8ef;border:1px solid var(--line);border-radius:22px;padding:28px}.about-box h3{margin-bottom:10px}
+footer{background:#18110d;color:#ddd;padding:38px 7%;text-align:center}.social{margin:12px}.footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0 18px;color:#fff}.tiny{font-size:13px;color:#aaa}
+.modal{position:fixed;inset:0;background:#0009;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal-box{background:#fff;border-radius:24px;max-width:760px;width:100%;max-height:90vh;overflow:auto;padding:30px;position:relative}.close{position:absolute;right:18px;top:14px;border:0;background:#f4eadf;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:20px}.modal-box h2{font-size:32px;margin-right:45px}.modal-meta{color:#8a7869;margin:6px 0 18px}.ingredients{background:#fff8ef;border-radius:16px;padding:18px;margin:18px 0}.ingredients ul{padding-left:20px}.instructions{counter-reset:step}.instructions li{list-style:none;margin:14px 0;padding-left:42px;position:relative}.instructions li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;background:var(--orange);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
+.no-results{text-align:center;color:var(--muted);padding:35px;grid-column:1/-1;display:none}
+@media(max-width:850px){.nav ul{display:none;position:absolute;left:0;right:0;top:64px;background:var(--dark);padding:18px 7%;flex-direction:column}.nav ul.show{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:55px}.hero-art{min-height:260px;font-size:105px}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.feature-box,.about-grid{grid-template-columns:1fr}.affiliate-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){section{padding:55px 5%}.hero{padding:50px 5%}.hero h1{font-size:47px}.grid{grid-template-columns:1fr}.affiliate-grid{grid-template-columns:1fr}.newsletter form{display:block}.newsletter input,.newsletter button{width:100%;height:50px;border-radius:25px;margin:5px 0}.search button{padding:0 15px}.title{font-size:33px}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home">🍳 Food <span>Lover's</span></a>
+    <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    <ul id="navLinks">
+      <li><a href="#recipes">Recipes</a></li><li><a href="#tutorials">Tutorials</a></li><li><a href="#kitchen">Kitchen Picks</a></li><li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <span class="badge">👨‍🍳 Cook • Learn • Enjoy</span>
+    <h1>Make food you <span>love.</span></h1>
+    <p>Discover easy homemade recipes, learn practical cooking techniques and follow simple step-by-step tutorials. New meal ideas are made for real home cooks.</p>
+    <a class="btn" href="#recipes">Explore Recipes</a>
+    <a class="btn alt" href="#newsletter" style="margin-left:8px">Get Free Recipes</a>
+  </div>
+  <div class="hero-art" aria-label="Cooking illustration">🍝🥗🍕</div>
+</section>
+
+<section id="recipes">
+  <h2 class="title">Popular Recipes</h2>
+  <p class="sub">Choose a recipe, open the full ingredients and follow the step-by-step method.</p>
+  <div class="search"><input id="searchInput" type="search" placeholder="Search chicken, pasta, breakfast..." aria-label="Search recipes"><button onclick="filterRecipes()">Search</button></div>
+  <div class="categories">
+    <button class="filter active" data-cat="All" onclick="setCategory('All',this)">All</button>
+    <button class="filter" data-cat="Quick Meals" onclick="setCategory('Quick Meals',this)">Quick Meals</button>
+    <button class="filter" data-cat="Healthy" onclick="setCategory('Healthy',this)">Healthy</button>
+    <button class="filter" data-cat="Breakfast" onclick="setCategory('Breakfast',this)">Breakfast</button>
+    <button class="filter" data-cat="Family Favourites" onclick="setCategory('Family Favourites',this)">Family Favourites</button>
+  </div>
+  <div class="grid" id="recipeGrid"></div>
+  <div class="no-results" id="noResults">No recipes found. Try another search.</div>
+  <div class="ad-slot"><div><strong>Advertisement space</strong><span>Replace this area with your approved ad code after your advertising account is accepted.</span></div></div>
+</section>
+
+<section class="feature">
+  <div class="feature-box">
+    <div class="emoji">📖🍲</div>
+    <div>
+      <span class="badge">Free resource</span>
+      <h2 style="font-size:34px;margin:12px 0">Build your weekly meal plan</h2>
+      <p>Use Food Lover's recipes to plan breakfast, lunch and dinner for the week. Later, this section can promote your own paid recipe ebook or meal planner.</p>
+      <ul class="checklist"><li>Easy family meals</li><li>Quick weekday ideas</li><li>Healthy options</li></ul>
+      <a class="btn" href="#newsletter">Send Me Recipes</a>
+    </div>
+  </div>
+</section>
+
+<section class="video" id="tutorials">
+  <h2 class="title">Cooking Tutorial</h2>
+  <p class="sub" style="color:#d6c9bf">Start with a simple creamy chicken pasta tutorial.</p>
+  <div class="video-box">
+    <div style="font-size:56px">🍝</div><h3 style="font-size:30px">Creamy Chicken Pasta</h3>
+    <p>Learn the basic method, then open the full recipe for exact ingredients and instructions.</p>
+    <button class="play" onclick="openRecipe(0)" aria-label="Open tutorial">▶</button>
+    <div class="steps"><div class="step"><b>Step 1</b>Cook pasta until tender.</div><div class="step"><b>Step 2</b>Sauté chicken and season well.</div><div class="step"><b>Step 3</b>Add sauce, combine and serve.</div></div>
+  </div>
+</section>
+
+<section class="affiliate" id="kitchen">
+  <h2 class="title">Kitchen Picks</h2>
+  <p class="sub">Useful equipment can make cooking easier. These are ready-to-use spaces for future affiliate links.</p>
+  <div class="affiliate-grid">
+    <article class="affiliate-card"><div class="icon">🍳</div><h3>Non-stick Pan</h3><p>Useful for eggs, chicken, stir-fries and quick dinners.</p><a class="small-btn" href="#" onclick="affiliateNotice(event,'Non-stick Pan')">View recommendation</a></article>
+    <article class="affiliate-card"><div class="icon">🔪</div><h3>Chef's Knife</h3><p>A good knife makes chopping vegetables and preparing ingredients easier.</p><a class="small-btn" href="#" onclick="affiliateNotice(event,'Chef’s Knife')">View recommendation</a></article>
+    <article class="affiliate-card"><div class="icon">🥣</div><h3>Mixing Bowls</h3><p>Great for baking, salads, marinades and meal preparation.</p><a class="small-btn" href="#" onclick="affiliateNotice(event,'Mixing Bowls')">View recommendation</a></article>
+  </div>
+  <p class="disclosure">Affiliate disclosure: when you add affiliate links, clearly tell visitors that Food Lover's may earn a commission from qualifying purchases.</p>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <h2 class="title">Get New Recipes</h2>
+  <p class="sub">Collect interested readers now so you can later send recipes, offers and your own digital products.</p>
+  <form onsubmit="subscribe(event)"><input id="email" type="email" required placeholder="Your email address" aria-label="Email address"><button type="submit">Subscribe</button></form>
+  <div class="form-message" id="formMessage"></div>
+  <p style="font-size:13px;color:#806f60;margin-top:8px">Demo form: connect it to an email service before using it for real subscribers.</p>
+</section>
+
+<section class="about" id="about">
+  <h2 class="title">About Food Lover's</h2><p class="sub">A simple cooking website designed to help everyday people cook with confidence.</p>
+  <div class="about-grid"><div class="about-box"><h3>Our goal</h3><p>Make cooking less intimidating with clear recipes, practical tutorials and useful kitchen tips.</p></div><div class="about-box"><h3>How the website can earn</h3><p>As the audience grows, Food Lover's can use approved advertising, disclosed affiliate partnerships, sponsored content and original digital products such as recipe ebooks.</p></div></div>
+</section>
+</main>
+
+<footer><div class="logo">🍳 Food <span>Lover's</span></div><div class="footer-links"><a href="#recipes">Recipes</a><a href="#tutorials">Tutorials</a><a href="#kitchen">Kitchen Picks</a><a href="#newsletter">Newsletter</a></div><div class="social">Cook • Learn • Enjoy ❤️</div><p class="tiny">© <span id="year"></span> Food Lover's. All rights reserved.</p></footer>
+
+<div class="modal" id="recipeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeOnBackdrop(event)"><div class="modal-box"><button class="close" onclick="closeRecipe()" aria-label="Close">×</button><h2 id="modalTitle"></h2><div class="modal-meta" id="modalMeta"></div><p id="modalIntro"></p><div class="ingredients"><h3>Ingredients</h3><ul id="modalIngredients"></ul></div><h3>Method</h3><ol class="instructions" id="modalSteps"></ol></div></div>
+
+<script>
+const recipes=[
+{name:'Creamy Chicken Pasta',cat:'Quick Meals',time:'30 min',emoji:'🍝',intro:'A creamy, comforting pasta dinner that is easy enough for a busy weekday.',ingredients:['250 g pasta','2 chicken breasts, sliced','1 tbsp cooking oil','2 cloves garlic, chopped','1 cup cooking cream','1/2 cup grated cheese','Salt, pepper and herbs'],steps:['Cook the pasta according to the packet instructions. Reserve a little pasta water, then drain.','Heat oil in a pan and cook the chicken until browned and cooked through. Season with salt and pepper.','Add garlic and cook briefly. Pour in cream and add cheese. Stir until smooth.','Add pasta and a splash of pasta water. Toss until coated, then serve with herbs.']},
+{name:'Classic Beef Burger',cat:'Family Favourites',time:'25 min',emoji:'🍔',intro:'A juicy homemade burger with a simple seasoning mix.',ingredients:['500 g beef mince','1 small onion, finely chopped','1 egg','1 tsp mixed herbs','Salt and pepper','4 burger rolls','Lettuce, tomato and sauce'],steps:['Mix mince, onion, egg, herbs, salt and pepper. Do not overwork the mixture.','Shape into four patties slightly wider than the rolls.','Cook in a hot pan or on a grill until browned and cooked to your preference.','Toast the rolls and build the burgers with lettuce, tomato and your favourite sauce.']},
+{name:'Vegetable Stir-Fry',cat:'Healthy',time:'20 min',emoji:'🥦',intro:'A colourful, fast vegetable meal that works well with rice or noodles.',ingredients:['2 cups mixed vegetables','1 bell pepper','1 carrot','2 tbsp cooking oil','2 tbsp soy sauce','1 tsp grated ginger','Cooked rice or noodles'],steps:['Cut all vegetables into similar-sized pieces so they cook evenly.','Heat oil in a large pan over high heat.','Add harder vegetables first, then softer vegetables. Stir frequently.','Add ginger and soy sauce. Toss for another minute and serve with rice or noodles.']},
+{name:'Fluffy Pancakes',cat:'Breakfast',time:'20 min',emoji:'🥞',intro:'Soft, fluffy pancakes for breakfast or a weekend treat.',ingredients:['1 cup flour','2 tbsp sugar','2 tsp baking powder','1 egg','3/4 cup milk','2 tbsp melted butter','Pinch of salt'],steps:['Mix flour, sugar, baking powder and salt.','Whisk egg, milk and melted butter separately.','Combine wet and dry ingredients just until mixed; small lumps are fine.','Cook spoonfuls on a lightly greased pan until bubbles form, flip and cook until golden.']},
+{name:'Fresh Chicken Salad',cat:'Healthy',time:'25 min',emoji:'🥗',intro:'A fresh chicken salad packed with crunchy vegetables and a simple dressing.',ingredients:['2 cooked chicken breasts','Mixed lettuce','1 cucumber','2 tomatoes','1/2 avocado','2 tbsp olive oil','1 tbsp lemon juice','Salt and pepper'],steps:['Slice the cooked chicken and prepare the vegetables.','Arrange lettuce, cucumber, tomatoes and avocado in a bowl.','Whisk olive oil, lemon juice, salt and pepper for the dressing.','Top with chicken, drizzle with dressing and serve immediately.']},
+{name:'Homemade Pizza',cat:'Family Favourites',time:'45 min',emoji:'🍕',intro:'A flexible homemade pizza you can customise with your favourite toppings.',ingredients:['1 pizza base or dough','1/2 cup tomato sauce','1 cup grated mozzarella','Sliced peppers','Mushrooms','Cooked chicken or beef','Italian herbs'],steps:['Heat the oven according to your dough or base instructions.','Spread tomato sauce over the base, leaving a small edge.','Add cheese and your favourite toppings.','Bake until the crust is golden and the cheese is melted.']},
+{name:'Chicken Wrap',cat:'Quick Meals',time:'20 min',emoji:'🌯',intro:'A quick lunch wrap with seasoned chicken and crunchy salad.',ingredients:['2 wraps','2 cooked chicken breasts','Lettuce','Tomato','Cucumber','2 tbsp mayonnaise or yoghurt','Paprika and black pepper'],steps:['Slice the chicken and season with paprika and pepper.','Warm the wraps briefly in a dry pan.','Add lettuce, tomato, cucumber and chicken.','Drizzle with sauce, fold tightly and serve.']},
+{name:'Omelette',cat:'Breakfast',time:'10 min',emoji:'🍳',intro:'A quick protein-rich breakfast that can be filled with vegetables and cheese.',ingredients:['3 eggs','1 tbsp milk','Salt and pepper','1 tsp butter or oil','Grated cheese','Chopped tomato and onion'],steps:['Whisk eggs, milk, salt and pepper.','Heat butter in a non-stick pan over medium heat.','Pour in eggs and gently move the edges as they set.','Add fillings, fold the omelette and cook until set.']},
+{name:'Tomato Pasta',cat:'Quick Meals',time:'25 min',emoji:'🍅',intro:'A simple tomato pasta made with pantry-friendly ingredients.',ingredients:['250 g pasta','1 tbsp oil','1 onion','2 garlic cloves','1 can chopped tomatoes','Mixed herbs','Salt and pepper'],steps:['Cook pasta and drain.','Sauté onion in oil until soft, then add garlic.','Add tomatoes and herbs and simmer for 10–15 minutes.','Toss with pasta and season to taste.']},
+{name:'Grilled Chicken & Veg',cat:'Healthy',time:'30 min',emoji:'🍗',intro:'A simple balanced plate of grilled chicken and vegetables.',ingredients:['2 chicken breasts','Broccoli','Carrot','Bell pepper','1 tbsp oil','Paprika','Salt and pepper'],steps:['Season chicken with oil, paprika, salt and pepper.','Heat a grill pan or oven and cook chicken until done.','Steam or roast vegetables until tender-crisp.','Slice chicken and serve with vegetables.']},
+{name:'French Toast',cat:'Breakfast',time:'15 min',emoji:'🍞',intro:'Golden French toast for a quick breakfast.',ingredients:['4 bread slices','2 eggs','1/2 cup milk','1 tsp sugar','Cinnamon','Butter for cooking'],steps:['Whisk eggs, milk, sugar and cinnamon.','Dip each bread slice briefly in the mixture.','Cook in butter over medium heat until golden on both sides.','Serve with fruit, honey or yoghurt.']},
+{name:'Beef Pasta Bake',cat:'Family Favourites',time:'45 min',emoji:'🧀',intro:'A cheesy family pasta bake that is great for leftovers.',ingredients:['300 g pasta','300 g beef mince','1 onion','1 cup tomato sauce','1 cup grated cheese','Mixed herbs','Salt and pepper'],steps:['Cook pasta until just tender.','Brown beef with onion and seasonings. Add tomato sauce and simmer.','Mix pasta with the beef sauce and place in a baking dish.','Top with cheese and bake until bubbling and golden.']},
+{name:'Banana Smoothie',cat:'Breakfast',time:'5 min',emoji:'🍌',intro:'A fast breakfast or snack smoothie.',ingredients:['1 banana','1 cup milk','1/2 cup plain yoghurt','1 tsp honey','Ice'],steps:['Add all ingredients to a blender.','Blend until smooth and creamy.','Taste and add more honey if needed.','Serve immediately.']},
+{name:'Tuna Sandwich',cat:'Quick Meals',time:'10 min',emoji:'🥪',intro:'A simple lunch sandwich with tuna and crunchy vegetables.',ingredients:['1 can tuna, drained','2 tbsp mayonnaise or yoghurt','Lettuce','Tomato','Cucumber','4 bread slices','Black pepper'],steps:['Mix tuna with mayonnaise or yoghurt and pepper.','Toast bread if desired.','Layer lettuce, tuna, tomato and cucumber.','Close, slice and serve.']},
+{name:'Roast Vegetables',cat:'Healthy',time:'35 min',emoji:'🥕',intro:'Easy oven-roasted vegetables that work as a side or light meal.',ingredients:['Carrots','Potatoes','Butternut','Onion','2 tbsp oil','Mixed herbs','Salt and pepper'],steps:['Heat oven to a high temperature.','Cut vegetables into similar pieces.','Toss with oil, herbs, salt and pepper.','Roast until browned and tender, turning once during cooking.']},
+{name:'French Fries',cat:'Family Favourites',time:'30 min',emoji:'🍟',intro:'Crispy homemade fries for burgers and family meals.',ingredients:['4 potatoes','2 tbsp oil','Salt','Paprika optional'],steps:['Cut potatoes into sticks and rinse well.','Dry thoroughly and toss with oil and seasoning.','Bake or air-fry until crisp and golden, turning as needed.','Season with salt while hot.']},
+{name:'Chicken Fried Rice',cat:'Quick Meals',time:'25 min',emoji:'🍚',intro:'A quick one-pan meal using cooked rice and vegetables.',ingredients:['3 cups cooked rice','1 chicken breast','1 egg','Mixed vegetables','2 tbsp soy sauce','1 tbsp oil'],steps:['Cook diced chicken in hot oil until done.','Push chicken aside and scramble the egg.','Add vegetables and rice and stir-fry.','Add soy sauce, mix well and heat through.']},
+{name:'Fruit Yoghurt Bowl',cat:'Healthy',time:'5 min',emoji:'🍓',intro:'A colourful no-cook breakfast or snack.',ingredients:['1 cup plain yoghurt','Banana','Berries or seasonal fruit','2 tbsp oats','1 tsp honey'],steps:['Spoon yoghurt into a bowl.','Add sliced fruit and oats.','Drizzle with honey.','Serve immediately or chill for later.']},
+{name:'Mac and Cheese',cat:'Family Favourites',time:'30 min',emoji:'🧀',intro:'Creamy cheesy comfort food that is easy to customise.',ingredients:['250 g macaroni','2 tbsp butter','2 tbsp flour','2 cups milk','1.5 cups grated cheese','Salt and pepper'],steps:['Cook macaroni and drain.','Melt butter, stir in flour and cook briefly.','Gradually whisk in milk until thickened.','Add cheese, season and mix with macaroni.']},
+{name:'Egg Fried Noodles',cat:'Quick Meals',time:'20 min',emoji:'🍜',intro:'A fast noodle meal with egg and vegetables.',ingredients:['2 noodle portions','2 eggs','Mixed vegetables','1 tbsp oil','2 tbsp soy sauce'],steps:['Cook noodles and drain.','Scramble eggs in hot oil and set aside.','Stir-fry vegetables, then add noodles and soy sauce.','Return egg to the pan, toss and serve.']}
+];
+let currentCategory='All';
+function recipeCard(r,i){return `<article class="card recipe-card" data-cat="${r.cat}" data-search="${r.name} ${r.cat} ${r.intro}"><div class="pic">${r.emoji}</div><div class="body"><h3>${r.name}</h3><div class="meta">${r.cat} • ${r.time}</div><p>${r.intro}</p><div class="card-actions"><button class="small-btn" onclick="openRecipe(${i})">View recipe</button><button class="small-btn secondary" onclick="shareRecipe(${i})">Share</button></div></div></article>`}
+function renderRecipes(){const grid=document.getElementById('recipeGrid');grid.innerHTML=recipes.map(recipeCard).join('');filterRecipes()}
+function filterRecipes(){const q=document.getElementById('searchInput').value.toLowerCase().trim();let shown=0;document.querySelectorAll('.recipe-card').forEach(card=>{const okCat=currentCategory==='All'||card.dataset.cat===currentCategory;const okSearch=!q||card.dataset.search.toLowerCase().includes(q);const show=okCat&&okSearch;card.style.display=show?'block':'none';if(show)shown++});document.getElementById('noResults').style.display=shown?'none':'block'}
+function setCategory(cat,btn){currentCategory=cat;document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');filterRecipes()}
+document.getElementById('searchInput').addEventListener('input',filterRecipes);
+function openRecipe(i){const r=recipes[i];document.getElementById('modalTitle').textContent=r.emoji+' '+r.name;document.getElementById('modalMeta').textContent=r.cat+' • '+r.time;document.getElementById('modalIntro').textContent=r.intro;document.getElementById('modalIngredients').innerHTML=r.ingredients.map(x=>`<li>${x}</li>`).join('');document.getElementById('modalSteps').innerHTML=r.steps.map(x=>`<li>${x}</li>`).join('');document.getElementById('recipeModal').classList.add('open');document.body.style.overflow='hidden'}
+function closeRecipe(){document.getElementById('recipeModal').classList.remove('open');document.body.style.overflow=''}function closeOnBackdrop(e){if(e.target.id==='recipeModal')closeRecipe()}
+function shareRecipe(i){const r=recipes[i];const text=`${r.name} — Food Lover's`;if(navigator.share){navigator.share({title:r.name,text, url:location.href}).catch(()=>{})}else{navigator.clipboard?.writeText(location.href);alert('Recipe link copied!')}}
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('show')}
+function subscribe(e){e.preventDefault();const email=document.getElementById('email').value;localStorage.setItem('foodLoversEmail',email);document.getElementById('formMessage').textContent='Thanks! Your email was saved for this demo. Connect an email service to collect real subscribers.';e.target.reset()}
+function affiliateNotice(e,name){e.preventDefault();alert(name+' is a placeholder. Add your approved affiliate URL here before publishing this recommendation.')}
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeRecipe()});document.getElementById('year').textContent=new Date().getFullYear();renderRecipes();
+</script>
+</body>
+</html>
